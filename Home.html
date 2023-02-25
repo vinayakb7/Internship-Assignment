@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Home Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="logout.js"></script>
+  <style>
+    .num {
+      border-radius: 20px;
+      background-color: #6200ee;
+    }
+
+    .row {  
+      border-radius: 20px;
+      margin-top: 10px;
+      box-shadow: 5px 1px #bb86fc;
+    }
+
+    .color {
+      height: 250px;
+      font-size: 20px;
+      overflow: auto;
+      padding-top: 5px;
+      font-family: cursive;
+      text-align: justify;
+      color: white;
+    }
+
+    img {
+      border-radius: 10px;
+    }
+    @media (max-width: 952px) {
+      .row{
+        margin-top: 20px;
+      }
+      .num {
+        text-align: center;
+        height: 50px;
+        padding: 0!important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo"><a class="logolink" href="Home.html"><img class="headerlogo" src="images/image2.png"></a></label>
+    <ul>
+      <li><a class="active hoveer" href="Home.html">Home</a></li>
+      <li><a class="hoveer" href="Todolist.html">To Do List</a></li>
+      <li><a class="hoveer" href="Shoppingcart.html">Shopping Page</a></li>
+      <li><a class="hoveer" href="Calculator.html">Calculator</a></li>
+      <li><a class="hoveer" href="Contactus.html">Contact Us</a></li>
+      <li><button class="btn logout" onclick="logout()">Log Out</button></li>
+    </ul>
+  </nav>
+  <div class="container mt-5">
+    <div class="col-md-6 col-md-offset-3 shophead text-center">Seven Wonders</div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1 color num text-center">#1</div>
+      <div class="col-md-3"><img src="images/w1.jpg"></div>
+      <div class="col-md-8 color"><b>Chichen Itza</b> was a large pre-Columbian city built by the Maya people of the
+        Terminal
+        Classic period. The archeological site is located in Tinúm Municipality, Yucatán State, Mexico.[1]
+
+        Chichen Itza was a major focal point in the Northern Maya Lowlands from the Late Classic (c. AD 600–900) through
+        the Terminal Classic (c. AD 800–900) and into the early portion of the Postclassic period (c. AD 900–1200). The
+        site exhibits a multitude of architectural styles, reminiscent of styles seen in central Mexico and of the Puuc
+        and Chenes styles of the Northern Maya lowlands.</div>
+    </div>
+    <div class="row">
+      <div class="col-md-1 color num">#2</div>
+      <div class="col-md-3"><img src="images/w2.jpg"></div>
+      <div class="col-md-8 color"><b>Christ the Redeemer </b>(Portuguese: Cristo Redentor, standard Brazilian
+        Portuguese:
+        [ˈkɾistu ʁedẽˈtoʁ], local pronunciation: [ˈkɾiɕtŭ̥ xe̞dẽˈtoɦ]) is an Art Deco statue of Jesus Christ in Rio de
+        Janeiro, Brazil, created by French sculptor Paul Landowski and built by Brazilian engineer Heitor da Silva
+        Costa, in collaboration with French engineer Albert Caquot. Romanian sculptor Gheorghe Leonida fashioned the
+        face. Constructed between 1922 and 1931, the statue is 30 metres (98 ft) high, excluding its 8-metre (26 ft)
+        pedestal. The arms stretch 28 metres (92 ft) wide[1][2]. </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1 color num">#3</div>
+      <div class="col-md-3"><img src="images/w3.jpg"></div>
+      <div class="col-md-8 color"><b>The Great Wall of China</b> (traditional Chinese: 萬里長城; simplified Chinese: 万里长城;
+        pinyin:
+        Wànlǐ Chángchéng) is a series of fortifications that were built across the historical northern borders of
+        ancient Chinese states and Imperial China as protection against various nomadic groups from the Eurasian Steppe.
+        Several walls were built from as early as the 7th century BC,[4] with selective stretches later joined together
+        by Qin Shi Huang (220–206 BC), the first emperor of China. Little of the Qin wall remains.[5] Later on, many
+        successive dynasties built and maintained multiple stretches of border walls.</div>
+    </div>
+    <div class="row">
+      <div class="col-md-1 color num">#4</div>
+      <div class="col-md-3"><img src="images/w4.jpg"></div>
+      <div class="col-md-8 color"><b>Machu Picchu </b>is a 15th-century Inca citadel located in the Eastern Cordillera
+        of
+        southern Peru on a 2,430-meter (7,970 ft) mountain ridge.[2][3] It is located in the Machupicchu District within
+        Urubamba Province[4] above the Sacred Valley, which is 80 kilometers (50 mi) northwest of Cusco. The Urubamba
+        River flows past it, cutting through the Cordillera and creating a canyon with a tropical mountain climate.[5]
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1 color num">#5</div>
+      <div class="col-md-3"><img src="images/w5.jpeg"></div>
+      <div class="col-md-8 color"><b>Petra</b> (Arabic: ٱلْبَتْرَا, romanized: Al-Batrāʾ; Ancient Greek: Πέτρα, "Rock",
+        Nabataean:, originally known to its inhabitants as Raqmu or Raqēmō[3][4] is a historic and
+        archaeological city in southern Jordan. It is adjacent to the mountain of Jabal Al-Madbah, in a basin surrounded
+        by mountains forming the eastern flank of the Arabah valley running from the Dead Sea to the Gulf of Aqaba.[5]
+        The area around Petra has been inhabited from as early as 7000 BC,[6] and the Nabataeans might have settled in
+        what would become the capital city of their kingdom as early as the 4th century BC.</div>
+    </div>
+    <div class="row">
+      <div class="col-md-1 color num">#6</div>
+      <div class="col-md-3"><img src="images/w6.jpg"></div>
+      <div class="col-md-8 color"><b>The Taj Mahal </b> is an Islamic ivory-white marble mausoleum on the right bank of
+        the river
+        Yamuna in the Indian city of Agra. It was commissioned in 1632 by the Mughal emperor Shah Jahan (r. 1628–1658)
+        to house the tomb of his favourite wife, Mumtaz Mahal; it also houses the tomb of Shah Jahan himself. The tomb
+        is the centrepiece of a 17-hectare (42-acre) complex, which includes a mosque and a guest house, and is set in
+        formal gardens bounded on three sides by a crenellated wall.</div>
+    </div>
+    <div class="row">
+      <div class="col-md-1 color num">#7</div>
+      <div class="col-md-3"><img src="images/w7.jpg"></div>
+      <div class="col-md-8 color"><b>The Colosseum </b> is an oval
+        amphitheatre in the centre of the city of Rome, Italy, just east of the Roman Forum. It is the largest ancient
+        amphitheatre ever built, and is still the largest standing amphitheatre in the world today, despite its age.
+        Construction began under the emperor Vespasian (r. 69–79 AD) in 72[1] and was completed in 80 AD under his
+        successor and heir, Titus (r. 79–81).[2] Further modifications were made during the reign of Domitian (r.
+        81–96).[3] The three emperors that were patrons of the work are known as the Flavian dynasty, and the
+        amphitheatre was named the Flavian Amphitheatre.</div>
+    </div>
+  </div>
+  <footer>
+    <p>Copyright &copy; <a href="Home.html">Vinayak Bilagi</a>. All Rights Reserved.</p>
+  </footer>
+  <script>
+    function logout(){
+      window.open("index.html");
+    }
+  </script>
+</body>
+
+</html>

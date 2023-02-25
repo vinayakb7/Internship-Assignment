@@ -1,0 +1,342 @@
+body {
+    background-color: #3600b3a8 !important;
+    /* overflow: hidden; */
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        overflow: auto;
+    }
+
+    img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+.headerlogo{
+margin-top: -10px;
+height: 100px;
+width: 100px;
+}
+
+.titlename {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 10px;
+    font-size: 50px;
+    margin-top: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+.formbody {
+    height: auto;
+    color: #fff;
+    background-color: #6200ee;
+    border-radius: 30px 0 30px 0;
+    /* box-shadow: 0px 5px white; */
+}
+
+.loginbody {
+    height: inherit;
+    color: white;
+}
+
+.maindiv {
+    margin: 100px 0;
+}
+
+.regform {
+    padding: 20px 0 0 0;
+}
+
+.form-label {
+    color: #fff;
+    font-family: cursive;
+}
+
+.radiobutton {
+    display: flex;
+    justify-content: space-around;
+}
+
+.submitbutton {
+    background-color: #bb86fc;
+    color: white;
+    font-family: serif;
+    /* border-radius: 0!important; */
+    width: 100%;
+    height: auto;
+}
+
+.alreadytitle {
+    font-family: monospace;
+    text-align: center;
+    font-size: 35px;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+.alreadycontent {
+    font-size: 20px;
+    text-align: justify;
+    word-spacing: 15px;
+    margin: 20px 0;
+}
+
+.btnclass {
+    margin: 20px 0;
+}
+
+.alreadybutton {
+    background-color: #bb86fc;
+    color: white;
+    font-family: serif;
+    border-radius: 0 !important;
+    width: 50%;
+    height: auto;
+}
+
+.alreadybutton:hover,
+.submitbutton:hover {
+    background-color: #fff;
+    color: #bb86fc;
+    font-family: serif;
+    border-radius: 0 !important;
+    height: auto;
+}
+
+
+
+.loginbutton {
+    align-items: center;
+}
+
+.formheight {
+    padding-top: 100px;
+    height: 400px;
+}
+
+.registerlink {
+    font-style: italic;
+    color: white !important;
+}
+
+.home-header {
+    height: 100px;
+    background-color: #6200ee;
+}
+
+.brand-logo img {
+    height: inherit;
+    width: 100px;
+    /* background-image: url('images/ideaa.png'); */
+}
+
+nav {
+    background: #6200ee;
+    height: 80px;
+    width: 100%;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+.logolink{
+    text-decoration: none !important;
+    color: #fff;
+}
+
+.logolink:hover{
+    color: #fff;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,
+.hoveer:hover {
+    background: #bb86fc;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.shophead{
+    margin: 10px 0;
+    color: #fff;
+    font-family: monospace;
+    font-size: 30px;
+    background-color: #6200ee;
+    border-radius: 80px;
+}
+
+.cartdiv{
+    margin: 5px 0;
+}
+
+.cartdiv label{
+    color: #fff;
+}
+
+.cartdiv input, .cartdiv label{
+    margin: 5px 0;    
+    width: 50%;
+}
+
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+.btndelete{
+    margin-right: 10px;
+}
+
+.para{
+    padding-left: 10px;
+    border: 1px solid #bb86fc;
+    font-size: 15px;
+    font-family: cursive;
+    font-style: italic;
+    margin: 10px 0;
+    height: 30px;
+    width: 30%;
+    color: #fff;
+    overflow: auto;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+@media (max-width: 858px) {
+    .para{
+        padding-left: 10px;
+        border: 1px solid #bb86fc;
+        font-size: 15px;
+        font-family: cursive;
+        font-style: italic;
+        margin: 10px 0;
+        height: 30px;
+        width: 100%;
+        color: #fff;
+        overflow: auto;
+    }
+
+    .carousel-indicators{
+        z-index: -1 !important;
+    }
+    .checkbtn {
+        display: inline;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked~ul {
+        left: 0;
+        z-index: 1;
+    }
+}
+
+.card{
+    color: white !important;
+    text-align: center;
+}
+
+footer{
+    bottom:0 !important;
+    color: #fff;
+    margin-top: 10px;
+    background-color:#6200ee;
+    padding-top: 15px;
+    text-align: center;
+    height: 50px;
+}
+
+footer a{
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color:black;
+}
+
+.logout{
+    background-color: #bb86fc;
+    border: none;
+    border-radius: 0 !important;
+}
+
+.logout:hover{
+    background-color: white;
+    border: none;
+    color: white;
+    border-radius: 0 !important;
+}

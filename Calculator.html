@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calculator Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="logout.js"></script>
+  <style>
+    section{
+      min-height: 79vh;
+    }
+    .btn-primary {
+      background-color: #6200ee;
+      border: none;
+      border-radius: 0 !important;
+    }
+
+    .btn-primary:hover {
+      background-color: #bb86fc;
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo"><a class="logolink" href="Home.html"><img class="headerlogo" src="images/image2.png"></a></label>
+    <ul>
+      <li><a class="hoveer" href="Home.html">Home</a></li>
+      <li><a class="hoveer" href="Todolist.html">To Do List</a></li>
+      <li><a class="hoveer" href="Shoppingcart.html">Shopping Page</a></li>
+      <li><a class="active hoveer" href="Calculator.html">Calculator</a></li>
+      <li><a class="hoveer" href="Contactus.html">Contact Us</a></li>
+      <li><button class="btn logout" onclick="logout()">Log Out</button></li>
+    </ul>
+  </nav>
+  <section>
+  <div class="col-md-6 col-md-offset-3 body">
+    <input class="form-control" id="first_number" type="text" placeholder="Enter First Number"><br>
+    <input class="form-control" id="second_number" type="text" placeholder="Enter Second Number"><br>
+    <div class="flex">
+      <button onclick="add();" class="btn btn-primary">+</button><button onclick="sub();"
+        class="btn btn-primary">-</button>
+      <button onclick="mul();" class="btn btn-primary">*</button><button onclick="div();"
+        class="btn btn-primary">/</button>
+    </div><Br>
+    <input class="form-control" id="answer" type="text" placeholder="Answer Displays Here"><br>
+  </div>
+</section>
+  <footer>
+    <p>Copyright &copy; <a href="Home.html">Vinayak Bilagi</a>. All Rights Reserved.</p>
+  </footer>
+  <script>
+    function logout(){
+      window.open("index.html");
+    }
+    function add() {
+      var fn = document.getElementById('first_number').value;
+      var sn = document.getElementById('second_number').value;
+      var ffn = parseFloat(fn);
+      var ssn = parseFloat(sn);
+      var sum = ffn + ssn;
+      document.getElementById("answer").value = sum;
+    }
+    function sub() {
+      var fn = document.getElementById('first_number').value;
+      var sn = document.getElementById('second_number').value;
+      var ffn = parseFloat(fn);
+      var ssn = parseFloat(sn);
+      var sub = ffn - ssn;
+      document.getElementById("answer").value = sub;
+    }
+    function mul() {
+      var fn = document.getElementById('first_number').value;
+      var sn = document.getElementById('second_number').value;
+      var ffn = parseFloat(fn);
+      var ssn = parseFloat(sn);
+      var mul = ffn * ssn;
+      document.getElementById("answer").value = mul;
+    }
+    function div() {
+      var fn = document.getElementById('first_number').value;
+      var sn = document.getElementById('second_number').value;
+      var ffn = parseFloat(fn);
+      var ssn = parseFloat(sn);
+      var div = ffn / ssn;
+      document.getElementById("answer").value = div;
+    }
+  </script>
+  
+</body>
+
+</html>

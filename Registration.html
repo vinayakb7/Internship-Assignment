@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Registration Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="logout.js"></script>
+  <style>
+    body{
+      overflow: hidden;
+    }
+    
+    @media (max-width: 858px) {
+      body{
+      overflow: visible;
+    }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="titlename">Registartion Form</div>
+    <div class="row maindiv">
+      <div class="loginbody col-md-4">
+        <div class="col-md-12 alreadytitle">
+          Already Registered?
+        </div>
+        <div class="col-md-12 alreadycontent">
+          Already registered with us? If so, click the button below to login to our client area from where you can manage your account.
+        </div>
+        <div class="col-md-12 btnclass">
+          <button class="col-md-4 col-md-offset-4 btn alreadybutton" onclick="login()">Log-In</button>
+        </div>
+      </div>
+      <div class="formbody col-md-8">
+        <form class="regform" action="">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="form-label">First Name</label>
+              <input type="text" class="form-control" name="first_name" id="first_name" pattern="^[a-zA-Z]*$" required title="Please type only alphabets!">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="form-label">Last Name</label>
+              <input type="text" class="form-control" name="last_name" id="last_name" pattern="^[a-zA-Z]*$" required title="Please type only alphabets!">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="form-label">Date Of Birth</label>
+              <input type="date" class="form-control" name="dob" id="dob" pattern="\d{1,2}/\d{1,2}/\d{4}" title="Please Enter Valid Date" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="form-label">Email Id</label>
+              <input type="email" class="form-control" name="emailid" id="emailid" required>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xs-4 col-md-6">
+            <label class="form-label">Gender</label><br>
+            <div class="radiobutton">
+              <div>
+                <input class="form-check-input" type="radio" id="male" name="gender" value="Male">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Male
+                </label>
+              </div>
+              <div>
+                <input class="form-check-input" type="radio" id="female" name="gender" value="Female">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Female
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="form-label">Contact No.</label>
+              <input type="tel" name="contactno" id="contactno" class="form-control"  pattern="[6-9]{1}[0-9]{9}" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="form-label">Password</label>
+              <input type="password" name="password" id="password" class="form-control" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="form-label">Confirm Password</label>
+              <input type="password" name="confirmpassword" id="confirmpassword" class="form-control" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" required>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label class="form-label">Address</label>
+              <input type="text" name="address" id="address" class="form-control" required>
+            </div>
+          </div>
+          <div class="col-md-4 col-md-offset-4 text-center">
+            <div class="form-group">
+              <button class="btn submitbutton" onclick="save()">Register</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    function login(){
+      window.open("index.html");
+    }
+    function save() {
+        let first_name, last_name, dob, gender, email, password, confirmpassword, contactno, address;
+        first_name = document.getElementById("first_name").value;
+        last_name = document.getElementById("last_name").value;
+        dob = document.getElementById("dob").value;
+        if (document.getElementById('male').checked) {
+            gender = document.getElementById('male').value;
+        }
+        else {
+            gender = document.getElementById('female').value;
+        }
+        email = document.getElementById("emailid").value;
+        password = document.getElementById("password").value;
+        confirmpassword = document.getElementById("confirmpassword").value;
+        contactno = document.getElementById("contactno").value;
+        address = document.getElementById("address").value;
+        if(first_name=="" || last_name=="" || dob=="" || email=="" || password=="" || confirmpassword=="" || contactno=="" || address=="")
+        {
+          alert("Please Enter All Details.")
+        }
+        else{
+        let registration_records = new Array();
+        registration_records = JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[];
+        if (registration_records.some((v) => { return v.email == email })) {
+            alert("Duplicate Data");
+        }
+        else {
+            if(password==confirmpassword){
+            registration_records.push({
+                "first_name": first_name,
+                "last_name": last_name,
+                "dob": dob,
+                "gender": gender,
+                "email": email,
+                "password": password,
+                "contactno": contactno,
+                "address": address
+            })
+            //alert(registration_records);
+            localStorage.setItem("users",JSON.stringify(registration_records));
+          window.open("index.html");
+        }
+        else{
+            alert("Password Didn't Matched! Sorry");
+        }
+        }
+      }
+    }
+</script>
+</body>
+
+</html>

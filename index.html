@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Log In</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="logout.js"></script>
+  <style>
+    body{
+      overflow: hidden;
+    }
+    @media (max-width: 858px) {
+      body{
+      overflow: visible;
+    }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="titlename">Log In</div>
+    <div class="row maindiv">
+      <div class="loginbody imagelogin col-md-8">
+        <img class="a" src="images/resize.jpg">
+      </div>
+      <div class="formbody formheight col-md-4">
+        <form>
+            <div class="form-group">
+              <label class="form-label">User Name
+              </label><input class="form-control" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  required type="email">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Password
+              </label><input class="form-control" id="password" name="password" type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" required>
+            </div>
+            <div>
+              <button class="btn col-md-4 col-md-offset-4 alreadybutton" onclick="login()">Log-In</button>
+            </div>
+            
+          </form><br><br><br>
+          <div class="col-md-8 col-md-offset-2">New User. &nbsp;<a class="registerlink" href="Registration.html" >Click here to Register.</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function login() {
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+      let registration_records = new Array();
+      registration_records = JSON.parse(localStorage.getItem("users"))
+      if(email=="" || password==""){
+        alert("Usename and Password Cant be blank.");
+      }
+      else{
+      if (registration_records.some((v) => { return v.email == email && v.password == password })) {
+        alert("Log in Successfull");
+        window.open("home.html");
+      }
+      else {
+        alert("Log in Failed");
+      }
+    }
+
+    }
+  </script>
+</body>
+
+</html>
